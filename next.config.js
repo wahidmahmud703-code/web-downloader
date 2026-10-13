@@ -1,37 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: { 
+    ignoreBuildErrors: true 
+  },
+  eslint: { 
+    ignoreDuringBuilds: true 
+  },
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "i.ytimg.com",
-      },
-      {
-        protocol: "https",
-        hostname: "**.tiktokcdn.com",
-      },
-      {
-        protocol: "https",
-        hostname: "**.tiktok**",
-      },
-      {
-        protocol: "https",
-        hostname: "**.twitch**",
-      },
-      {
-        protocol: "https",
-        hostname: "**instagram**",
-      },
-      {
-        protocol: "https",
-        hostname: "**.twimg.com",
-      },
-      {
-        protocol: "https",
-        hostname: "**.redd.it",
-      },
-    ],
-  },
-  typescript: { ignoreBuildErrors: true },
-  eslint: { ignoreDuringBuilds: true },
+        hostname: "**.redd.it"
+      }
+    ]
+  }
 };
+
+module.exports = nextConfig;
